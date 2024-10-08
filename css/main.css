@@ -2,7 +2,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 10px;
+  padding-top: 28px;
 }
 /* BOARD */
 .board-wrapper {
@@ -11,6 +11,14 @@ main {
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.board_timer {
+  height: 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: bold;
 }
 
 .board-row {

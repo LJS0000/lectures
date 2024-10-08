@@ -5,15 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WORDLE</title>
     <!-- CSS -->
+    <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
   <body>
     <div id="root">
-      <header></header>
+      <header>
+        <div class="header_btn btn_menu">
+          <img src="assets/menu.svg" alt="menu" />
+        </div>
+        <h1 class="header_title">Wordle</h1>
+        <div class="header_btn_group">
+          <div class="header_btn btn_help">
+            <img src="assets/question-mark.svg" alt="help" />
+          </div>
+          <div class="header_btn btn_graph">
+            <img src="assets/graph.svg" alt="graph" />
+          </div>
+          <div class="header_btn btn_setting">
+            <img src="assets/cog.svg" alt="setting" />
+          </div>
+        </div>
+      </header>
 
       <main>
         <!-- board -->
         <div class="board-wrapper">
+          <div class="board_timer">
+            <span>time:</span>
+            <p>00:00</p>
+          </div>
           <div class="board-row row-1">
             <div class="board-block"></div>
             <div class="board-block"></div>
@@ -105,6 +127,9 @@
       </main>
 
       <footer></footer>
+
+      <!-- JavaScript -->
+      <script src="js/header.js"></script>
     </div>
   </body>
 </html>
