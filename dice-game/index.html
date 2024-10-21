@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DICE GAME</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- TITLE -->
+    <h1 class="read-only">DICE GAME</h1>
+    <!-- MAIN -->
+    <main class="main-container">
+      <!-- BUTTONS -->
+      <div class="buttons">
+        <button class="btn btn_new-game"><span>🔄</span>NEW GAME</button>
+        <button class="btn btn_roll"><span>🎲</span>ROLL DICE</button>
+        <button class="btn btn_hold"><span>📥</span>HOLD</button>
+      </div>
+      <!-- PLAYERS INFO -->
+      <div class="players-info">
+        <!-- PLAYERS 1 -->
+        <div class="player-wrapper player_1">
+          <h2>PLAYER 1</h2>
+          <span class="score_1-total">0</span>
+          <div class="current-wrapper">
+            <p>CURRENT</p>
+            <span class="score_1-current">0</span>
+          </div>
+        </div>
+        <!-- PLAYERS 2 -->
+        <div class="player-wrapper player_2">
+          <h2>PLAYER 2</h2>
+          <span class="score_2-total">0</span>
+          <div class="current-wrapper">
+            <p>CURRENT</p>
+            <span class="score_2-current">0</span>
+          </div>
+        </div>
+      </div>
+      <!-- DICE -->
+      <div class="dice"></div>
+    </main>
+    <div class="result-container">
+      <div class="result"></div>
+      <div class="result-progressbar"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
