@@ -1,0 +1,81 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.form {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.form__group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form__label {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.form__input,
+.form__select {
+  flex: 1;
+}
+
+.form__group--memo .form__input--memo {
+  margin-left: 20px;
+}
+
+.form__submit {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.filter {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.filter__category,
+.filter__order {
+  width: 18%;
+  padding: 5px;
+}
+
+.filter__date {
+  width: 18%;
+  display: flex;
+  gap: 20px;
+  > div {
+    height: 100%;
+  }
+}
+
+.item-list {
+  border: 1px solid #ddd;
+  padding: 10px;
+  list-style: none;
+}
+
+.item-list__item {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-list__item:last-child {
+  border-bottom: none;
+}
