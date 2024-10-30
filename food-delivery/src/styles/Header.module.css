@@ -1,0 +1,18 @@
+.header {
+  @apply flex justify-between p-4 bg-slate-500;
+}
+
+.header__title {
+  @apply text-3xl font-extrabold text-white;
+}
+
+.header__button {
+  @apply p-2 text-sm font-bold;
+  @apply rounded shadow-xl bg-slate-100;
+  @apply transition duration-300 ease-in-out transform;
+  @apply hover:scale-105 hover:bg-gray-200;
+}
+
+.header__button:active {
+  @apply transform scale-75;
+}
