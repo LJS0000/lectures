@@ -11,7 +11,7 @@ const FoodCard = ({ food, buttonProps }) => {
       <div className={styles.card__quantity__container}>
         <div className={styles.card__quantity__input}>
           <p>수량</p>
-          <input type='number' value={food.quantity} />
+          <input type='number' value={food.quantity} readOnly />
         </div>
         {buttonProps ?? null}
       </div>
