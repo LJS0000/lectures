@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { formatNumber } from '../utils/formatNumber'
 import Header from '../components/Header'
 import FoodForm from '../components/FoodForm'
@@ -10,37 +10,33 @@ function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [cartList, setCartList] = useState([])
 
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen)
-  }
+  const toggleModal = useCallback(() => {
+    setIsModalOpen((prev) => !prev)
+  }, [])
 
-  const addToCart = (item) => {
-    setCartList((prev) => [...prev, item])
-    setFoodList((prev) => prev.filter((food) => food !== item))
+  const addToCart = useCallback((item) => {
+    setCartList((prevCartList) => [...prevCartList, item])
+    setFoodList((prevFoodList) => prevFoodList.filter((food) => food !== item))
     alert('장바구니에 추가되었습니다.')
-  }
+  }, [])
 
-  const changeQuantity = (food, num) => {
-    setCartList((prev) =>
-      prev.map((item) => {
+  const changeQuantity = useCallback((food, num) => {
+    setCartList((prevCartList) =>
+      prevCartList.map((item) => {
         if (item === food) {
-          if (item.quantity + num <= 0) {
-            return { ...item, quantity: 0 }
-          }
+          if (item.quantity + num <= 0) return { ...item, quantity: 0 }
           return { ...item, quantity: item.quantity + num }
         }
         return item
       })
     )
-  }
+  }, [])
 
-  const calculateTotalPrice = () => {
-    const total = cartList.reduce((acc, cur) => {
-      return acc + cur.price * cur.quantity
-    }, 0)
-
-    return formatNumber(total)
-  }
+  const calculateTotalPrice = useCallback(() => {
+    return formatNumber(
+      cartList.reduce((acc, cur) => acc + cur.price * cur.quantity, 0)
+    )
+  }, [cartList])
 
   const addToCartBtn = (food) => {
     return <button onClick={() => addToCart(food)}>{'장바구니에 추가'}</button>

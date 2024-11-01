@@ -1,7 +1,8 @@
+import React from 'react'
 import { formatNumber } from '../utils/formatNumber'
 import styles from '../styles/FoodCard.module.css'
 
-const FoodCard = ({ food, buttonProps }) => {
+const FoodCard = React.memo(({ food, buttonProps }) => {
   return (
     <div className={styles.card}>
       <div className={styles.card__info}>
@@ -17,6 +18,6 @@ const FoodCard = ({ food, buttonProps }) => {
       </div>
     </div>
   )
-}
+})
 
 export default FoodCard
