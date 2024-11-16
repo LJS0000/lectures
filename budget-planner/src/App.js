@@ -4,6 +4,7 @@ import './App.css'
 function App() {
   const [items, setItems] = useState([])
   const [isMemo, setIsMemo] = useState(false)
+  // 결과 필터링
   const [filterConditions, setFilterConditions] = useState({
     category: '전체',
     order: '',
