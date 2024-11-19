@@ -12,7 +12,7 @@ function App() {
           display: 'flex',
           justifyContent: 'space-evenly',
           alignItems: 'center',
-          padding: '18px 0',
+          padding: '20px 0',
         }}
       >
         <a
