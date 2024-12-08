@@ -23,7 +23,7 @@ const StyledComponents = () => {
           </div>
           <div>
             <img src='https://picsum.photos/300' alt='thumbnail' />
-            <img src='https://picsum.photos/350' alt='thumbnail' />
+            <img src='https://picsum.photos/250' alt='thumbnail' />
           </div>
           <div>
             <img src='https://picsum.photos/450' alt='thumbnail' />
