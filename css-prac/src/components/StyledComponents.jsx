@@ -115,7 +115,7 @@ const DetailPage = styled.div`
 
   > div:nth-child(3) {
     display: flex;
-    gap: 20px;
+    gap: 16px;
     padding-top: 20px;
     padding-right: 10px;
   }
