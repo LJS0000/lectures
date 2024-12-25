@@ -103,7 +103,7 @@ export default StyledComponents
 
 const Title = styled.h1`
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
 `
 
 const DetailPage = styled.div`
